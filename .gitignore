@@ -1,0 +1,7 @@
+/gui/node_modules/
+/.idea/
+/dist/
+/gui/dist/
+/server/dist/
+/server/node_modules/
+/imageviewer.zip
