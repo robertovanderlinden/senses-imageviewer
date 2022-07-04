@@ -47,6 +47,14 @@ export default {
     this.formatCountDownText();
   },
 
+  mounted() {
+    this.$options.interval = setInterval(this.formatCountDownText, 60000);
+  },
+
+  beforeDestroy() {
+    clearInterval(this.$options.interval);
+  },
+
   watch: {
     module: {
       immediate: true,
@@ -89,6 +97,7 @@ export default {
 
   methods: {
     formatCountDownText() {
+      console.log('*** CALLING FORMAT');
       if (this.showCountDown && this.countDownDate) {
         let date = parse(this.countDownDate, 'dd-MM-yyyy', new Date());
         this.countDownText = formatDistanceToNowStrict(date, {unit: 'day', locale: nl});
