@@ -28,7 +28,7 @@ const imageviewerConfig: SmartMirror.IWidgetConfig = {
 		label: "Show countdown",
 		type: "bool",
 		value: false,
-		description: "Add the count down in days to the header"
+		description: "Add the countdown in days to the header"
 	},{
 		name: "countDownDate",
 		label: "Date (dd-MM-yyyy)",
