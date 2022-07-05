@@ -20,7 +20,7 @@
   </div>
 </template>
 <script>
-import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict';
+import formatDistance from 'date-fns/formatDistance'
 import parse from 'date-fns/parse';
 import nl from 'date-fns/locale/nl'
 
@@ -97,10 +97,9 @@ export default {
 
   methods: {
     formatCountDownText() {
-      console.log('*** CALLING FORMAT');
       if (this.showCountDown && this.countDownDate) {
         let date = parse(this.countDownDate, 'dd-MM-yyyy', new Date());
-        this.countDownText = formatDistanceToNowStrict(date, {unit: 'day', locale: nl});
+        this.countDownText = formatDistance(Date.now(), date, {locale: nl});
       }
     },
   },
