@@ -1,5 +1,5 @@
 const imageviewerConfig: SmartMirror.IWidgetConfig = {
-	name: 'Image Viewer',
+	name: 'imageviewer',
 	icon: 'fad fa-align-justify',
 	helper: true,
 	link: "your_url_link",
