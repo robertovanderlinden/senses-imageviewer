@@ -23,6 +23,7 @@
 import formatDistance from 'date-fns/formatDistance'
 import parse from 'date-fns/parse';
 import nl from 'date-fns/locale/nl'
+import startOfDay from 'date-fns/startOfDay'
 
 export default {
   name: "image-viewer",
@@ -99,7 +100,7 @@ export default {
     formatCountDownText() {
       if (this.showCountDown && this.countDownDate) {
         let date = parse(this.countDownDate, 'dd-MM-yyyy', new Date());
-        this.countDownText = formatDistance(Date.now(), date, {locale: nl});
+        this.countDownText = formatDistance(startOfDay(Date.now()), startOfDay(date), {locale: nl});
       }
     },
   },
