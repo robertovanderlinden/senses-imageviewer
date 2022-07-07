@@ -1,7 +1,7 @@
-const imageviewerConfig: SmartMirror.IWidgetConfig = {
-	name: 'imageviewer',
+const ImageViewerConfig: SmartMirror.IWidgetConfig = {
+	name: 'image-viewer',
 	icon: 'fad fa-align-justify',
-	helper: true,
+	helper: false,
 	link: "your_url_link",
 	author: "Roberto van der Linden",
 	version: "0.0.1",
@@ -51,4 +51,4 @@ const imageviewerConfig: SmartMirror.IWidgetConfig = {
 	]
 }
 
-module.exports = imageviewerConfig;
+module.exports = ImageViewerConfig;
